@@ -1,12 +1,12 @@
+import { Home } from 'mylibrarycontainer'
 import './App.css'
-import MyComponent from './lib/index'
 
 function App() {
 
 
   return (
     <>
-      <MyComponent/>
+      <Home/>
     </>
   )
 }

@@ -1,12 +1,12 @@
-import { Home } from 'mylibrarycontainer'
-import './App.css'
+import { NavBar } from 'mylibrarycontainer'
+// import './App.css'
 
 function App() {
 
 
   return (
     <>
-      <Home/>
+      <NavBar name='AtticBits'/>
     </>
   )
 }

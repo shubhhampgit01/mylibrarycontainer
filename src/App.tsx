@@ -1,12 +1,12 @@
 import './App.css'
-import Heading from './lib/index'
+import MyComponent from './lib/index'
 
 function App() {
 
 
   return (
     <>
-      <Heading/>
+      <MyComponent/>
     </>
   )
 }

@@ -1,54 +1,11 @@
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
-// import dts from "vite-plugin-dts";
-// import { EsLinter, linterPlugin } from "vite-plugin-linter";
-// import tsConfigPaths from "vite-tsconfig-paths";
-// import copy from "rollup-plugin-copy";
-
-// import { resolve } from "node:path";
-// import * as packageJson from "./package.json";
-
-// // https://vitejs.dev/config/
-// export default defineConfig((configEnv) => ({
-//   plugins: [
-//     react(),
-//     tsConfigPaths(),
-//     linterPlugin({
-//       include: ["./src/**/*.{ts,tsx}"],
-//       linters: [new EsLinter({ configEnv })],
-//     }),
-//     dts({
-//       include: ["src/lib/"],
-//     }),
-//     copy({
-//       targets: [{ src: "src/lib/constants/colors.scss", dest: "dist" }],
-//       hook: 'writeBundle',
-//     }),
-//   ],
-//   build: {
-//     lib: {
-//       entry: resolve("src", "lib/index.tsx"),
-//       name: "mylibrarycontainer",
-//       formats: ["es", "umd"],
-//       fileName: (format) => `mylibrarycontainer.${format}.js`,
-//     },
-//     rollupOptions: {
-//       external: [...Object.keys(packageJson.peerDependencies)],
-//     },
-//   },
-// }));
-
-
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
-import EsLint from "vite-plugin-linter";
+import { EsLinter, linterPlugin } from "vite-plugin-linter";
 import tsConfigPaths from "vite-tsconfig-paths";
 import copy from "rollup-plugin-copy";
 
 import { resolve } from "node:path";
-const { EsLinter, linterPlugin } = EsLint;
 import * as packageJson from "./package.json";
 
 // https://vitejs.dev/config/
@@ -57,7 +14,7 @@ export default defineConfig((configEnv) => ({
     react(),
     tsConfigPaths(),
     linterPlugin({
-      include: ["./src}/**/*.{ts,tsx}"],
+      include: ["./src/**/*.{ts,tsx}"],
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
@@ -65,7 +22,7 @@ export default defineConfig((configEnv) => ({
     }),
     copy({
       targets: [{ src: "src/lib/constants/colors.scss", dest: "dist" }],
-      hook: 'writeBundle'
+      hook: 'writeBundle',
     }),
   ],
   build: {
@@ -80,3 +37,46 @@ export default defineConfig((configEnv) => ({
     },
   },
 }));
+
+
+
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+// import dts from "vite-plugin-dts";
+// import EsLint from "vite-plugin-linter";
+// import tsConfigPaths from "vite-tsconfig-paths";
+// import copy from "rollup-plugin-copy";
+
+// import { resolve } from "node:path";
+// const { EsLinter, linterPlugin } = EsLint;
+// import * as packageJson from "./package.json";
+
+// // https://vitejs.dev/config/
+// export default defineConfig((configEnv) => ({
+//   plugins: [
+//     react(),
+//     tsConfigPaths(),
+//     linterPlugin({
+//       include: ["./src}/**/*.{ts,tsx}"],
+//       linters: [new EsLinter({ configEnv })],
+//     }),
+//     dts({
+//       include: ["src/lib/"],
+//     }),
+//     copy({
+//       targets: [{ src: "src/lib/constants/colors.scss", dest: "dist" }],
+//       hook: 'writeBundle'
+//     }),
+//   ],
+//   build: {
+//     lib: {
+//       entry: resolve("src", "lib/index.tsx"),
+//       name: "mylibrarycontainer",
+//       formats: ["es", "umd"],
+//       fileName: (format) => `mylibrarycontainer.${format}.js`,
+//     },
+//     rollupOptions: {
+//       external: [...Object.keys(packageJson.peerDependencies)],
+//     },
+//   },
+// }));

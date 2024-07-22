@@ -10,7 +10,7 @@
     "README.md"
   ],
   "main": "./dist/mylibrarycontainer.umd.js",
-  "style": "./dist/style.scss",
+  "style": "./dist/style.module.css",
   "module": "./dist/mylibrarycontainer.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -18,11 +18,11 @@
       "import": "./dist/mylibrarycontainer.es.js",
       "require": "./dist/mylibrarycontainer.umd.js",
       "types": "./dist/index.d.ts",
-      "style": "./dist/style.scss"
+      "style": "./dist/style.module.css"
     },
     "./dist/style.css": {
-      "import": "./dist/style.scss",
-      "require": "./dist/style.scss"
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     },
     "./dist/colors.scss": {
       "import": "./dist/colors.scss",

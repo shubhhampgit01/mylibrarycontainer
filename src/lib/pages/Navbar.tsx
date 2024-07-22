@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.scss';
+import './Navbar.module.scss';
 
 // Define the interface for props
 interface NavbarProps {

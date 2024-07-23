@@ -1,6 +1,6 @@
 {
   "name": "@shubhhampgit01/mylibrarycontainer",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "type": "module",
   "publishConfig": {
     "@shubhhampgit01:registry": "https://npm.pkg.github.com"
@@ -10,7 +10,7 @@
     "README.md"
   ],
   "main": "./dist/mylibrarycontainer.umd.js",
-  "style": "./dist/style.module.css",
+  "style": "./dist/style.css",
   "module": "./dist/mylibrarycontainer.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -18,7 +18,7 @@
       "import": "./dist/mylibrarycontainer.es.js",
       "require": "./dist/mylibrarycontainer.umd.js",
       "types": "./dist/index.d.ts",
-      "style": "./dist/style.module.css"
+      "style": "./dist/style.css"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",

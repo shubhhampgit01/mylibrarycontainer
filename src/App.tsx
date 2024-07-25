@@ -1,4 +1,5 @@
 import { NavBar } from 'mylibrarycontainer'
+import HomePage from './lib/pages/home'
 // import './App.css'
 
 function App() {
@@ -6,7 +7,9 @@ function App() {
 
   return (
     <>
-      <NavBar name='AtticBits'/>
+      {/* <NavBar name='AtticBits'/> */}
+      <HomePage/>
+
     </>
   )
 }
